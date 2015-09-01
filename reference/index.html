@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>reference | Processing.js</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../css/syntax.css" type="text/css" />
+    <link rel="stylesheet" href="../css/processing-js.css" type="text/css" />
+    <script src="../js/processing.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.tweet.min.js" type="text/javascript"></script>
+    <script src="../js/tabselector.js" type="text/javascript"></script>
+    <script src="http://cdn.webglstats.com/stat.js" defer="defer" async="async"></script>
+    <script type="text/javascript">
+      // Only do tracking on the actual site
+      if (document.location.host === "processingjs.org") {
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8565070-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        }());
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a href="http://processingjs.org/"><img src="../images/header.png" width="177" height="42"></a>
+      </div>
+      <span class="tagline">a port of the Processing Visualization Language</span>
+
+      <div class="navbar">
+        <canvas width="940px" height="78px" data-processing-sources="/sketches/bannerSketch.pde"></canvas>
+        <ul>
+          <li><a href="http://processingjs.org/"><span>home</span></a></li>
+          <li><a href="http://processingjs.org/download/"><span>download</span></a></li>
+          <li><a href="index.html"><span>reference</span></a></li>
+          <li><a href="http://processingjs.org/exhibition/"><span>exhibition</span></a></li>
+          <li><a href="http://processingjs.org/learning/"><span>learning</span></a></li>
+          <li><a href="http://processingjs.org/articles/"><span>articles</span></a></li>
+          <li><a href="http://processingjs.org/community/"><span>community</span></a></li>
+          <li><a href="http://processingjs.org/blog/"><span>blog</span></a></li>
+        </ul>
+        <a class="viewsource" href="http://processingjs.org/sketches/bannerSketch.pde">view source</a>
+      </div>
+
+      <div class="page row">
+        <div class="span11">
+<h2>Reference</h2>
+
+<p>This page references all the commands available to Processing.js. Regular Javascript commands will work in Processing.js script.</p>
+<p>The Processing.js community is working towards a 100% compatible API, allowing all native Java code to run in Javascript.
+<b>Items highlighted in red are not yet implemented</b>.</p>
+<p>The original Processing reference can be found on <a href="http://processing.org/reference/">the Processing website</a></p>
+<p>If you encounter any problems with these commands or their documentation please file a <a href ="https://processing-js.lighthouseapp.com/projects/41284-processingjs/overview">bug</a>
+
+<div class="reference row">
+  <div class="span">
+    <div class="category">
+      <b>Processing.js instructions</b>
+        <a href="pjs&#32;directive.1">@pjs directives</a>
+        <a href="font.1">font</a>
+        <a href="globalKeyEvents.1">globalKeyEvents</a>
+        <a href="pauseOnBlur.1">pauseOnBlur</a>
+        <a href="preload.1">preload</a>
+    </div>
+
+    <div class="category">
+      <b>Structure</b>
+      <a href="array&#32;access/index.html">[] (array access)</a>
+      <a href="assign.1">= (assign)</a>
+      <a href="class.1">class</a>
+      <a href="comma.1">, (comma)</a>
+      <a href="comment.1">// (comment)</a>
+      <a href="curly&#32;braces/index.html">{} (curly braces)</a>
+      <a href="doc&#32;comment.1">/** */ (doc comment)</a>
+      <a href="dot/index.html">. (dot)</a>
+      <a href="draw_.1">draw()</a>
+      <a href="exit_/index.html">exit()</a>
+      <a href="extends.1">extends</a>
+      <a href="false.1">false</a>
+      <a href="final/index.html">final</a>
+      <a href="implements/index.html">implements</a>
+      <a href="import/index.html">import</a>
+      <a href="loop_.1">loop()</a>
+      <a href="multiline&#32;comment.1">/* */ (multiline comment)</a>
+      <a href="new/index.html">new</a>
+      <a href="noLoop_.1">noLoop()</a>
+      <a href="null/index.html">null</a>
+      <a href="parentheses.1">() (parentheses)</a>
+      <a href="popStyle_.1">popStyle()</a>
+      <a href="private" >private</a>
+      <a href="public.1">public</a>
+      <a href="pushStyle_" pushStyle()</a>
+      <a href="redraw_.1">redraw()</a>
+      <a href="return/index.html">return</a>
+      <a href="semi&#32;colon/index.html">; (semicolon)</a>
+      <a href="setup_.1">setup()</a>
+      <a href="size_.1">size()</a>
+      <a href="static/index.html">static</a>
+      <a href="super.1">super</a>
+      <a href="this/index.html">this</a>
+      <a href="true.1">true</a>
+      <a href="void/index.html">void</a>
+    </div>
+
+    <div class="category">
+      <b>Environment</b>
+        <a href="cursor_.1">cursor()</a>
+        <a href="focused/index.html">focused</a>
+        <a href="frameCount/index.html">frameCount</a>
+        <a href="frameRate_.1">frameRate()</a>
+        <a href="frameRate.1">frameRate</a>
+        <a href="height.1">height</a>
+        <a href="noCursor_.1">noCursor()</a>
+        <a href="online/index.html">online</a>
+        <a href="screen/index.html">screen</a>
+        <a href="width.1">width</a>
+    </div>
+
+    <div class="category">
+      <b>Data</b>
+      <h5>Primitive</h5>
+        <a href="boolean.1">boolean</a>
+        <a href="byte.1">byte</a>
+        <a href="char.1">char</a>
+        <a href="color&#32;datatype.1">color</a>
+        <a href="double/index.html">double</a>
+        <a href="float.1">float</a>
+        <a href="int.1">int</a>
+        <a href="long/index.html">long</a>
+      <h5>Composite</h5>
+        <a href="Array.1">Array</a>
+        <a href="ArrayList/index.html">ArrayList</a>
+        <a href="HashMap/index.html">HashMap</a>
+        <a href="Object.1">Object</a>
+        <a href="String.1">String</a>
+        <a href="XMLElement/index.html">XMLElement</a>
+      <h5>Conversion</h5>
+        <a href="binary_.1">binary()</a>
+        <a href="boolean_/index.html">boolean()</a>
+        <a href="byte_.1">byte()</a>
+        <a href="char_/index.html">char()</a>
+        <a href="float_.1">float()</a>
+        <a href="hex_.1">hex()</a>
+        <a href="int_.1">int()</a>
+        <a href="str_/index.html">str()</a>
+        <a href="unbinary_.1">unbinary()</a>
+        <a href="unhex_.1">unhex()</a>
+      <h5>String Functions</h5>
+        <a href="join_.1">join()</a>
+        <a href="match_.1">match()</a>
+        <a href="matchAll_.1">matchAll()</a>
+        <a href="nf_.1">nf()</a>
+        <a href="nfc_.1">nfc()</a>
+        <a href="nfp_.1">nfp()</a>
+        <a href="nfs_.1">nfs()</a>
+        <a href="split_.1">split()</a>
+        <a href="splitTokens_/index.html">splitTokens()</a>
+        <a href="trim_.1">trim()</a>
+          <div>
+            <h5>Array Functions</h5>
+              <a href="append_.1">append()</a>
+              <a href="arrayCopy_/index.html">arrayCopy()</a>
+              <a href="concat_.1">concat()</a>
+              <a href="expand_.1">expand()</a>
+              <a href="reverse_.1">reverse()</a>
+              <a href="shorten_.1">shorten()</a>
+              <a href="sort_.1">sort()</a>
+              <a href="splice_.1">splice()</a>
+              <a href="subset_.1">subset()</a>
+          </div>
+    </div>
+
+    <div class="category">
+      <b>Control</b>
+      <h5>Relational Operators</h5>
+        <a href="equality.1">== (equality)</a>
+        <a href="greater&#32;than.1">> (greater than)</a>
+        <a href="greater&#32;than&#32;or&#32;equal&#32;to.1">>= (greater than or equal to)</a>
+        <a href="inequality.1">!= (inequality)</a>
+        <a href="less&#32;than.1">< (less than)</a>
+        <a href="less&#32;than&#32;or&#32;equal&#32;to.1">&lt;= (less than or equal to)</a>
+      <h5>Iteration</h5>
+        <a href="for_.1">for()</a>
+        <a href="while_.1">while()</a>
+      <h5>Conditionals</h5>
+        <a href="break.1">break</a>
+        <a href="case.1">case</a>
+        <a href="conditional/index.html">?: (conditional)</a>
+        <a href="continue/index.html">continue</a>
+        <a href="default.1">default</a>
+        <a href="else_.1">else()</a>
+        <a href="if_.1">if()</a>
+        <a href="switch_.1">switch()</a>
+      <h5>Logical Operators</h5>
+        <a href="logical&#32;AND.1">&& (logical AND)</a>
+        <a href="logical&#32;NOT.1">! (logical NOT)</a>
+        <a href="logical&#32;OR.1">|| (logical OR)</a>
+    </div>
+  </div>
+
+
+  <div class="span3">
+    <div class="category">
+      <b>Shape</b>
+      <a href="PShape.1">PShape</a>
+      <h5>2D Primitives</h5>
+        <a href="arc_/index.html">arc()</a>
+        <a href="ellipse_.1">ellipse()</a>
+        <a href="line_/index.html">line()</a>
+        <a href="point_/index.html">point()</a>
+        <a href="quad_.1">quad()</a>
+        <a href="rect_.1">rect()</a>
+        <a href="triangle_/index.html">triangle()</a>
+      <h5>Curves</h5>
+        <a href="bezier_.1">bezier()</a>
+        <a href="bezierDetail_/index.html">bezierDetail()</a>
+        <a href="bezierPoint_.1">bezierPoint()</a>
+        <a href="bezierTangent_.1">bezierTangent()</a>
+        <a href="curve_.1">curve()</a>
+        <a href="curveDetail_/index.html">curveDetail()</a>
+        <a href="curvePoint_.1">curvePoint()</a>
+        <a href="curveTangent_/index.html">curveTangent()</a>
+        <a href="curveTightness_.1">curveTightness()</a>
+          <div>
+          <h5>3D Primitives</h5>
+            <a href="box_/index.html">box()</a>
+            <a href="sphere_.1">sphere()</a>
+            <a href="sphereDetail_.1">sphereDetail()</a>
+          </div>
+      <h5>Attributes</h5>
+        <a href="ellipseMode_.1">ellipseMode()</a>
+        <a href="noSmooth_.1">noSmooth()</a>
+        <a href="rectMode_.1">rectMode()</a>
+        <a href="smooth_.1">smooth()</a>
+        <a href="strokeCap_.1">strokeCap()</a>
+        <a href="strokeJoin_.1">strokeJoin()</a>
+        <a href="strokeWeight_.1">strokeWeight()</a>
+      <h5>Vertex</h5>
+        <a href="beginShape_.1">beginShape()</a>
+        <a href="bezierVertex_.1">bezierVertex()</a>
+        <a href="curveVertex_.1">curveVertex()</a>
+        <a href="endShape_.1">endShape()</a>
+        <a href="texture_.1">texture()</a>
+        <a href="textureMode_.1">textureMode()</a>
+        <a href="vertex_.1">vertex()</a>
+          <div>
+          <h5>Loading & Displaying</h5>
+            <a href="loadShape_.1">loadShape()</a>
+            <a href="shape_.1">shape()</a>
+            <a href="shapeMode_.1">shapeMode()</a>
+          </div>
+          </div>
+
+      <div class="category">
+      <b>Input</b>
+        <h5>Mouse</h5>
+          <a href="mouseButton.1">mouseButton</a>
+          <a href="mouseClicked_/index.html">mouseClicked()</a>
+          <a href="mouseDragged_.1">mouseDragged()</a>
+          <a href="mouseMoved_.1">mouseMoved()</a>
+          <a href="mouseOut_.1">mouseOut()</a>
+          <a href="mouseOver_.1">mouseOver()</a>
+          <a href="mousePressed_.1">mousePressed()</a>
+          <a href="mousePressed/index.html">mousePressed</a>
+          <a href="mouseReleased_.1">mouseReleased()</a>
+          <a href="mouseX.1">mouseX</a>
+          <a href="mouseY.1">mouseY</a>
+          <a href="pmouseX.1">pmouseX</a>
+          <a href="pmouseY.1">pmouseY</a>
+        <h5>Keyboard</h5>
+          <a href="key.1">key</a>
+          <a href="keyCode.1">keyCode</a>
+          <a href="keyPressed_.1">keyPressed()</a>
+          <a href="keyPressed.1">keyPressed</a>
+          <a href="keyReleased_.1">keyReleased()</a>
+          <a href="keyTyped_/index.html">keyTyped()</a>
+        <h5>Files</h5>
+          <a class="warning" href="http://processing.org/reference/createInput_/" title="Link to native docs">createInput()</a> <!--NOT DONE-->
+          <a href="loadBytes_.1">loadBytes()</a>
+          <a href="loadStrings_.1">loadStrings()</a>
+          <a class="warning" href="http://processing.org/reference/open_/" title="Link to native docs">open()</a><!--NOT DONE-->
+          <a class="warning" href="http://processing.org/reference/selectFolder_/" title="Link to native docs">selectFolder()</a><!--NOT DONE-->
+          <a class="warning" href="http://processing.org/reference/selectInput_/" title="Link to native docs">selectInput()</a><!--NOT DONE-->
+        <h5>Web</h5>
+          <a href="link_/index.html">link()</a>
+          <a class="warning" href="http://processing.org/reference/param_/" title="Link to native docs">param()</a><!--NOT DONE-->
+          <a href="status_/index.html">status()</a>
+        <h5>Time & Date</h5>
+          <a href="day_.1">day()</a>
+          <a href="hour_.1">hour()</a>
+          <a href="millis_.1">millis()</a>
+          <a href="minute_.1">minute()</a>
+          <a href="month_.1">month()</a>
+          <a href="second_.1">second()</a>
+          <a href="year_.1">year()</a>
+      </div>
+
+      <div class="category">
+      <b>Output</b>
+        <h5>Text Area</h5>
+          <a href="print_.1">print()</a>
+          <a href="println_.1">println()</a>
+        <div>
+        <h5>Image</h5>
+          <a href="save_.1">save()</a>
+          <a href="saveFrame_.1">saveFrame()</a>
+        </div>
+        <div class="category">
+          <h5>Files</h5>
+            <a href="http://processing.org/reference/PrintWriter/" title="Link to native docs" class="warning">PrintWriter</a><!--NOT DONE-->
+            <a href="http://processing.org/reference/beginRaw_/" title="Link to native docs" class="warning">beginRaw()</a><!--NOT DONE-->
+            <a href="http://processing.org/reference/beginRecord_/" title="Link to native docs" class="warning">beginRecord()</a><!--NOT DONE-->
+            <a href="http://processing.org/reference/createOutput_/" title="Link to native docs" class="warning">createOutput()</a>    <!--NOT DONE-->
+            <a href="http://processing.org/reference/createReader_/" title="Link to native docs" class="warning">createReader()</a><!--NOT DONE-->
+            <a href="http://processing.org/reference/createWriter_/" title="Link to native docs" class="warning">createWriter()</a><!--NOT DONE-->
+            <a href="http://processing.org/reference/endRaw_/" title="Link to native docs" class="warning">endRaw()</a><!--NOT DONE-->
+            <a href="http://processing.org/reference/endRecord_/" title="Link to native docs" class="warning">endRecord()</a><!--NOT DONE-->
+            <a href="http://processing.org/reference/saveBytes_/" title="Link to native docs" class="warning">saveBytes()</a><!--NOT DONE-->
+            <a href="http://processing.org/reference/saveStream_/" title="Link to native docs" class="warning">saveStream()</a> <!--NOT DONE-->
+            <a href="saveStrings_.1">saveStrings()</a>
+            <a href="http://processing.org/reference/selectOutput_/" title="Link to native docs" class="warning">selectOutput()</a><!--NOT DONE-->
+        </div>
+      </div>
+      <div class="category">
+      <b>Transform</b>
+          <a href="applyMatrix_.1">applyMatrix()</a>
+          <a href="popMatrix_.1">popMatrix()</a>
+          <a href="printMatrix_.1">printMatrix()</a>
+          <a href="pushMatrix_.1">pushMatrix()</a>
+          <a href="resetMatrix_.1">resetMatrix()</a>
+          <a href="rotate_.1">rotate()</a>
+          <a href="rotateX_.1">rotateX()</a>
+          <a href="rotateY_.1">rotateY()</a>
+          <a href="rotateZ_.1">rotateZ()</a>
+          <a href="scale_.1">scale()</a>
+          <a href="translate_.1">translate()</a>
+      </div>
+
+      <div class="category" >
+      <b>Lights, Camera</b>
+        <h5>Lights</h5>
+          <a href="ambientLight_.1">ambientLight()</a>
+          <a href="directionalLight_.1">directionalLight()</a>
+          <a href="lightFalloff_/index.html">lightFalloff()</a>
+          <a href="lightSpecular_.1">lightSpecular()</a>
+          <a href="lights_.1">lights()</a>
+          <a href="noLights_.1">noLights()</a>
+          <a href="normal_/index.html">normal()</a>
+          <a href="pointLight_.1">pointLight()</a>
+          <a href="spotLight_.1">spotLight()</a>
+        <h5>Camera</h5>
+          <a href="beginCamera_.1">beginCamera()</a>
+          <a href="camera_.1">camera()</a>
+          <a href="endCamera_.1">endCamera()</a>
+          <a href="frustum_.1">frustum()</a>
+          <a href="ortho_/index.html">ortho()</a>
+          <a href="perspective_.1">perspective()</a>
+          <a href="printCamera_/index.html">printCamera()</a>
+          <a href="printProjection_/index.html">printProjection()</a>
+        <h5>Coordinates</h5>
+          <a href="modelX_.1">modelX()</a>
+          <a href="modelY_.1">modelY()</a>
+          <a href="modelZ_.1">modelZ()</a>
+          <a href="screenX_.1">screenX()</a>
+          <a href="screenY_.1">screenY()</a>
+          <a href="screenZ_.1">screenZ()</a>
+        <h5>Material Properties</h5>
+          <a href="ambient_.1">ambient()</a>
+          <a href="emissive_.1">emissive()</a>
+          <a href="shininess_.1">shininess()</a>
+          <a href="specular_.1">specular()</a>
+      </div>
+  </div>
+
+  <div class="span3">
+    <div class="category">
+      <b>Color</b>
+        <h5>Setting</h5>
+          <a href="background_.1">background()</a>
+          <a href="colorMode_.1">colorMode()</a>
+          <a href="fill_.1">fill()</a>
+          <a href="noFill_.1">noFill()</a>
+          <a href="noStroke_.1">noStroke()</a>
+          <a href="stroke_.1">stroke()</a>
+        <h5>Creating & Reading</h5>
+          <a href="alpha_.1">alpha()</a>
+          <a href="blendColor_.1">blendColor()</a>
+          <a href="blue_.1">blue()</a>
+          <a href="brightness_.1">brightness()</a>
+          <a href="color_.1">color()</a>
+          <a href="green_.1">green()</a>
+          <a href="hue_.1">hue()</a>
+          <a href="lerpColor_/index.html">lerpColor()</a>
+          <a href="red_.1">red()</a>
+          <a href="saturation_.1">saturation()</a>
+      </div>
+
+    <div class="category">
+      <b>Image</b>
+        <a href="PImage.1">PImage</a>
+        <a href="createImage_.1">createImage()</a>
+      <h5>Loading & Displaying</h5>
+        <a href="image_.1">image()</a>
+        <a href="imageMode_.1">imageMode()</a>
+        <a href="loadImage_.1">loadImage()</a>
+        <a href="noTint_.1">noTint()</a>
+        <a href="requestImage_.1">requestImage()</a>
+        <a href="tint_.1">tint()</a>
+      <h5>Pixels</h5>
+        <a href="blend_.1">blend()</a>
+        <a href="copy_.1">copy()</a>
+        <a href="filter_.1">filter()</a>
+        <a href="get_.1">get()</a>
+        <a href="loadPixels_.1">loadPixels()</a>
+        <a href="pixels_.1">pixels[]</a>
+        <a href="set_.1">set()</a>
+        <a href="updatePixels_.1">updatePixels()</a>
+    </div>
+
+    <div class="category">
+      <b>Rendering</b>
+        <a href="PGraphics.1">PGraphics</a>
+        <a href="createGraphics_.1">createGraphics()</a>
+        <a href="hint_/index.html">hint()</a>
+    </div>
+
+    <div class="category">
+
+        <b>Typography</b>
+      <div>
+        <a href="PFont.1">PFont</a>
+       </div>
+      <h5>Loading & Displaying</h5>
+        <a href="createFont_.1">createFont()</a>
+        <a href="loadFont_.1">loadFont()</a>
+        <a href="text_.1">text()</a>
+        <a href="textFont_.1">textFont()</a>
+      <div>
+      <h5>Attributes</h5>
+        <a href="textAlign_.1">textAlign()</a>
+        <a href="textLeading_/index.html">textLeading()</a>
+        <a href="textMode_.1">textMode()</a>
+        <a href="textSize_/index.html">textSize()</a>
+        <a href="textWidth_/index.html">textWidth()</a>
+      <h5>Metrics</h5>
+        <a href="textAscent_.1">textAscent()</a>
+        <a href="textDescent_.1">textDescent()</a>
+      </div>
+    </div>
+
+    <div class="category">
+    <b>Math</b>
+        <a href="PVector/index.html">PVector</a>
+      <h5>Operators</h5>
+        <a href="add&#32;assign.1">+= (add assign)</a>
+        <a href="addition.1">+ (addition)</a>
+        <a href="decrement.1">-- (decrement)</a>
+        <a href="divide.1">/ (divide)</a>
+        <a href="divide&#32;assign/index.html">/= (divide assign)</a>
+        <a href="increment.1">++ (increment)</a>
+        <a href="minus.1">- (minus)</a>
+        <a href="modulo.1">% (modulo)</a>
+        <a href="multiply.1">* (multiply)</a>
+        <a href="multiply&#32;assign/index.html">*= (multiply assign)</a>
+        <a href="subtract&#32;assign.1">-= (subtract assign)</a>
+      <h5>Bitwise Operators</h5>
+        <a href="bitwise&#32;AND.1">& (bitwise AND)</a>
+        <a href="bitwise&#32;OR.1">| (bitwise OR)</a>
+        <a href="left&#32;shift.1"><< (left shift)</a>
+        <a href="right&#32;shift.1">>> (right shift)</a>
+      <h5>Calculation</h5>
+        <a href="abs_/index.html">abs()</a>
+        <a href="ceil_.1">ceil()</a>
+        <a href="constrain_/index.html">constrain()</a>
+        <a href="dist_.1">dist()</a>
+        <a href="exp_/index.html">exp()</a>
+        <a href="floor_.1">floor()</a>
+        <a href="lerp_.1">lerp()</a>
+        <a href="log_/index.html">log()</a>
+        <a href="mag_/index.html">mag()</a>
+        <a href="map_.1">map()</a>
+        <a href="max_.1">max()</a>
+        <a href="min_.1">min()</a>
+        <a href="norm_.1">norm()</a>
+        <a href="pow_.1">pow()</a>
+        <a href="round_.1">round()</a>
+        <a href="sq_.1">sq()</a>
+        <a href="sqrt_.1">sqrt()</a>
+      <h5>Trigonometry</h5>
+        <a href="acos_.1">acos()</a>
+        <a href="asin_.1">asin()</a>
+        <a href="atan_.1">atan()</a>
+        <a href="atan2_/index.html">atan2()</a>
+        <a href="cos_.1">cos()</a>
+        <a href="degrees_.1">degrees()</a>
+        <a href="radians_.1">radians()</a>
+        <a href="sin_.1">sin()</a>
+        <a href="tan_.1">tan()</a>
+      <h5>Random</h5>
+        <a href="noise_.1">noise()</a>
+        <a href="noiseDetail_.1">noiseDetail()</a>
+        <a href="noiseSeed_.1">noiseSeed()</a>
+        <a href="random_.1">random()</a>
+        <a href="randomSeed_/index.html">randomSeed()</a>
+    </div>
+    <div class="category">
+      <b>Constants</b>
+        <a href="HALF_PI.1">HALF_PI (1.57079...)</a>
+        <a href="PI.1">PI (3.14159...)</a>
+        <a href="QUARTER_PI/index.html">QUARTER_PI (0.78539...)</a>
+        <a href="TWO_PI.1">TWO_PI (6.28318...)</a>
+      </div>
+  </div>
+</div>
+
+<div class="cclicense">
+  <p>This reference is licensed under the CC BY-NC-SA 2.0 license:</p>
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+    <img alt="Creative Commons License" border="0" src="../images/somerights20.gif" />
+  </a>
+</div>
+        </div>
+        <div class="sidebar span4">
+          <h3><a href="http://processingjs.org/download/">Downloads</a></h3>
+          <ul>
+            <li><a href="http://processingjs.org/download/">Download the latest version of Processing.js!</a></li>
+          </ul>
+
+          <h3><a href="http://processingjs.org/articles/">Articles</a></h3>
+          <ul>
+            <li><a href="http://processingjs.org/articles/jsQuickStart.html">Quick Start - JavaScript Developer</a></li>
+            <li><a href="http://processingjs.org/articles/p5QuickStart.html">Quick Start - Processing Developer</a></li>
+            <li><a href="http://processingjs.org/articles/RenderingModes.html">Rendering Modes</a></li>
+            <li><a href="http://processingjs.org/articles/PomaxGuide.html">Pomax's Guide to processing-js</a></li>
+          </ul>
+
+          <h3><a>Web IDEs</a></h3>
+          <ul>
+            <li><a href="http://sketchpad.cc">Sketchpad.cc</a></li>
+            <li><a href="http://processingjs.org/tools/processing-helper.html">Processing.js Helper</a></li>
+            <li><a href="http://www.openprocessing.org">OpenProcessing.org</a></li>
+          </ul>
+
+          <h3><a href="http://processingjs.org/community/">Community</a></h3>
+          <ul>
+            <li><a href="irc://irc.mozilla.org/processing.js">IRC Channel</a></li>
+            <li><a href="http://processing-js.lighthouseapp.com/">Bug Tracker</a></li>
+            <li><a href="http://github.com/processing-js/processing-js/">Github Repository</a></li>
+            <li><a href="http://groups.google.com/group/processingjs">Google Group</a></li>
+            <li><a href="http://zenit.senecac.on.ca/wiki/index.php/">Open Source @ Seneca</a></li>
+          </ul>
+
+          <h3><a href="http://twitter.com/processingjs">Twitter Feed</a></h3>
+          <div class="twitter"></div>
+        </div>
+      </div>
+
+      <div class="footer">
+        Processing is an open visualization language developed by
+        <a href="http://benfry.com/">Ben Fry</a> &amp; <a href="http://reas.com/">Casey Reas</a>,
+        and originally ported to Javascript by
+        <a href="http://ejohn.org/blog/processingjs/">John Resig</a>.
+        Processing.js is maintained by the Processing.js team.
+      </div>
+    </div>
+    <a href="http://github.com/processing-js/processing-js/">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="../images/forkme-right-orange.png" alt="Fork me on GitHub">
+    </a>
+  </body>
+</html>
